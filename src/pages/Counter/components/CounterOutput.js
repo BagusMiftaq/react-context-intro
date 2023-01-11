@@ -1,7 +1,10 @@
-const CounterOutput = ({value}) => {
+import {CounterContext} from "../../../context/Counter";
+import React from "react";
+const CounterOutput = () => {
+    const value = React.useContext(CounterContext)
 
     return (
-        <h3>Curren count : {value}</h3>
+        <h3>Curren count : {value.counter}</h3>
     )
 }
 
